@@ -1,0 +1,23 @@
+\input regression-test.tex
+
+\def\s#1{\immediate\write20{#1}}
+\newcount\counta
+\newcount\countb
+
+\def\test#1#2#3\relax{%
+\counta`#1\relax
+\countb`#2\relax
+\s{\the\counta,\the\countb}%
+}
+
+\START
+\expandafter\test\string Z!!!!\relax
+\expandafter\test\string ^^22!!!!\relax
+\expandafter\test\string ^^e9!!!!\relax
+\expandafter\test\string é!!!!\relax
+\expandafter\test\string ^^^^fffa!!!!\relax
+\expandafter\test\string ^^^^^10001!!!!\relax
+\expandafter\test\string 𐀁!!!!\relax
+
+
+\END
