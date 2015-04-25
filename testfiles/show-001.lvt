@@ -1,0 +1,9 @@
+
+% http://tracker.luatex.org/view.php?id=902
+
+\input regression-test.tex
+
+\START
+    \expandafter\show\csname foo#\endcsname
+
+\END
