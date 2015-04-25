@@ -1,0 +1,10 @@
+
+% http://tracker.luatex.org/view.php?id=903
+
+\input regression-test.tex
+
+\START
+\def\use#1{#1}
+\use{\foo123456789012345678901234567890123456789012345678901234567890XXXXXXXXXXXXXXY}
+
+\END
