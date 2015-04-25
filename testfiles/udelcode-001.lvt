@@ -1,0 +1,40 @@
+
+\input regression-test.tex
+
+
+
+\START
+
+\delcode`a="28
+
+\setbox0\hbox{$\left a x\right)$}
+\showbox0
+
+
+\count0=\delcode`(
+\showthe\count0
+
+
+\Udelcode`a=0 "28
+
+\setbox0\hbox{$\left a x\right)$}
+\showbox0
+
+
+
+\count0=\Udelcodenum`a
+\showthe\count0
+
+
+\Udelcodenum`a= "000028
+
+\setbox0\hbox{$\left a x\right)$}
+\showbox0
+
+\count0=\Udelcodenum`a
+\showthe\count0
+
+
+
+\END
+
