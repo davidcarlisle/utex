@@ -1,0 +1,82 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \box0=
+\hbox(4.30554+0.0)x5.71527
+.\mathon
+.\vbox(4.30554+0.0)x5.71527
+..\kern2.15274
+..\hbox(3.5764+-1.4236)x0.0, shifted -1.86458
+...\teni ^
+..\kern-4.30554
+..\hbox(4.30554+0.0)x5.71527
+...\teni x
+.\mathoff
+! OK.
+l. ...\showbox0
+> \box0=
+\hbox(4.30554+2.1528)x5.71527
+.\mathon
+.\vbox(7.88194+-1.4236)x5.71527, shifted 3.5764
+..\hbox(4.30554+0.0)x5.71527
+...\teni x
+..\hbox(3.5764+-1.4236)x0.0, shifted -2.14236
+...\teni ^
+.\mathoff
+! OK.
+l. ...\showbox0
+> \box0=
+\hbox(4.30554+0.0)x5.71527
+.\mathon
+.\vbox(4.30554+0.0)x5.71527
+..\kern2.15274
+..\hbox(3.5764+-1.4236)x0.0, shifted -1.86458
+...\teni ^
+..\kern-4.30554
+..\hbox(4.30554+0.0)x5.71527
+...\teni x
+.\mathoff
+! OK.
+l. ...\showbox0
+! Missing number, treated as zero.
+<to be read again> 
+r
+l. ...\setbox0\hbox{$\newhat rubbish{
+x}$}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+! Missing number, treated as zero.
+<to be read again> 
+r
+l. ...\setbox0\hbox{$\newhat rubbish{
+x}$}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+! Missing number, treated as zero.
+<to be read again> 
+r
+l. ...\setbox0\hbox{$\newhat rubbish{
+x}$}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+> \box0=
+\hbox(6.94444+0.0)x58.7068
+.\mathon
+.\teni r
+.\kern0.27779
+.\teni u
+.\teni b
+.\teni b
+.\teni i
+.\teni s
+.\teni h
+.\tenrm 0
+.\tenrm 1
+.\tenrm 9
+.\tenrm 4
+.\teni x
+.\mathoff
+! OK.
+l. ...\showbox0
