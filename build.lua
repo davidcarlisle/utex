@@ -8,5 +8,8 @@ stdengine = "luatex"
 
 checkformat = "plain"
 
+supportdir = "."
+checksuppfiles  = {"regression-test.cfg"}
+
 kpse.set_program_name ( "kpsewhich" )
 dofile ( kpse.lookup ( "l3build.lua" ))
