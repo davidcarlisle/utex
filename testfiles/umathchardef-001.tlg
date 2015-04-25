@@ -1,0 +1,13 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \z=\Umathchar"1"01"000012.
+l. ...\show\z
+> 18874386.
+l. ...\showthe\numexpr\z\relax
+\Umathcodenum\z="1200012
+> \zz=\Umathchar"1"01"000012.
+l. ...\show\zz
+> \zzz=\mathchar"1112.
+l. ...\show\zzz
+\z=\zz
+\z!=\zzz
