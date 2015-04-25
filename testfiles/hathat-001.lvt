@@ -1,0 +1,17 @@
+\input regression-test.tex
+
+
+
+\START
+\wlog{zero [^^00]}
+\wlog{A [^^41]}
+\wlog{A [^^^^0041]}
+\wlog{A [^^^^^00041]}
+\wlog{A [^^^^^^000041]}
+\wlog{`A [^^c0]}
+\wlog{`A [^^^^00c0]}
+\wlog{`A [^^^^^000c0]}
+\wlog{`A [^^^^^^0000c0]}
+\wlog{bfA [^^^^^1d400]}
+\wlog{bfA [^^^^^^01d400]}
+\END
