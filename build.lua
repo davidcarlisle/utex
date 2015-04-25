@@ -4,7 +4,7 @@
 module = "utex"
 
 checkengines = {"luatex","xetex"}
-stdengine = "luatex"
+stdengine = "xetex"
 
 checkformat = "plain"
 
