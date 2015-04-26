@@ -1,0 +1,28 @@
+
+\input regression-test.tex
+
+
+
+\START
+
+\TESTEXP
+{ifincsname 1}
+{\expandafter\string\csname\ifincsname yes\else no\fi\endcsname}
+
+\TESTEXP
+{ifincsname 2}
+{\ifincsname yes\else no\fi}
+
+
+\TESTEXP
+{ifincsname 3}
+{\expandafter\expandafter\expandafter
+ \string\expandafter\csname\ifincsname yes\else no\fi\endcsname}
+
+
+\TESTEXP
+{ifincsname 4}
+{\ifincsname  yes[\the\currentiftype]\else no[\the\currentiftype]\fi}
+
+\END
+
