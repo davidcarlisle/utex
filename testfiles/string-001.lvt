@@ -11,13 +11,20 @@
 }
 
 \START
-\expandafter\test\string Z!!!!\relax
-\expandafter\test\string ^^22!!!!\relax
-\expandafter\test\string ^^e9!!!!\relax
-\expandafter\test\string é!!!!\relax
-\expandafter\test\string ^^^^fffa!!!!\relax
-\expandafter\test\string ^^^^^10001!!!!\relax
-\expandafter\test\string 𐀁!!!!\relax
+\TEST{Z}
+{\expandafter\test\string Z!!!!\relax}
+\TEST{"22}
+{\expandafter\test\string ^^22!!!!\relax}
+\TEST{"e9}
+{\expandafter\test\string ^^e9!!!!\relax}
+\TEST{utf8 "e9}
+{\expandafter\test\string é!!!!\relax}
+\TEST{"fffa}
+{\expandafter\test\string ^^^^fffa!!!!\relax}
+\TEST{"10001}
+{\expandafter\test\string ^^^^^10001!!!!\relax}
+\TEST{uff8 "10001}
+{\expandafter\test\string 𐀁!!!!\relax}
 
 
 \END
