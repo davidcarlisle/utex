@@ -1,0 +1,20 @@
+
+\input regression-test.tex
+
+
+
+\START
+
+
+\setbox0\hbox{$\Uradical 2 "70 {x+y}$}
+\TEST{Uradical with brace}{\showbox0}
+
+\setbox0\hbox{$\Uradical 2 "70 x+y$}
+\TEST{Uradical without brace}{\showbox0}
+
+\setbox0\hbox{$\Uradical 1 "70 x+y$}
+\TEST{Uradical non radical}{\showbox0}
+
+
+\END
+

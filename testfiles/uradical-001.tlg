@@ -1,0 +1,80 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+============================================================
+TEST 1: Uradical with brace
+============================================================
+> \box0=
+\hbox(7.79439+2.60558)x31.53236
+.\mathon
+.\hbox(7.79439+2.60558)x31.53236
+..\hbox(0.39998+9.6)x8.33336, shifted -6.99443
+...\tensy p
+..\vbox(7.79439+1.94444)x23.199
+...\kern0.39998
+...\rule(0.39998+0.0)x*
+...\kern1.1611
+...\hbox(5.83333+1.94444)x23.199
+....\teni x
+....\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+....\tenrm +
+....\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+....\teni y
+....\kern0.35878
+.\mathoff
+! OK.
+<to be read again> 
+\endgroup 
+l. ...\TEST{Uradical with brace}{\showbox0}
+============================================================
+============================================================
+TEST 2: Uradical without brace
+============================================================
+> \box0=
+\hbox(8.00272+2.39725)x31.53236
+.\mathon
+.\hbox(8.00272+2.39725)x14.04863
+..\hbox(0.39998+9.6)x8.33336, shifted -7.20276
+...\tensy p
+..\vbox(8.00272+0.0)x5.71527
+...\kern0.39998
+...\rule(0.39998+0.0)x*
+...\kern2.89722
+...\hbox(4.30554+0.0)x5.71527
+....\teni x
+.\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+.\tenrm +
+.\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+.\teni y
+.\kern0.35878
+.\mathoff
+! OK.
+<to be read again> 
+\endgroup 
+l. ...\TEST{Uradical without brace}{\showbox0}
+============================================================
+============================================================
+TEST 3: Uradical non radical
+============================================================
+> \box0=
+\hbox(13.4166+1.94444)x28.23026
+.\mathon
+.\hbox(13.4166+0.0)x10.74652
+..\hbox(4.30554+1.94444)x5.03125, shifted -4.80551
+...\teni p
+..\vbox(13.4166+0.0)x5.71527
+...\kern4.30554
+...\rule(4.30554+0.0)x*
+...\kern0.49997
+...\hbox(4.30554+0.0)x5.71527
+....\teni x
+.\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+.\tenrm +
+.\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+.\teni y
+.\kern0.35878
+.\mathoff
+! OK.
+<to be read again> 
+\endgroup 
+l. ...\TEST{Uradical non radical}{\showbox0}
+============================================================
