@@ -4,6 +4,8 @@
 \input regression-test.tex
 
 \START
-    \expandafter\show\csname foo#\endcsname
+
+\TEST{hash in show csname}
+{\expandafter\show\csname foo#\endcsname}
 
 \END
