@@ -8,31 +8,39 @@
 \delcode`a="28
 
 \setbox0\hbox{$\left a x\right)$}
-\showbox0
+\TEST{delcode setting}
+{\showbox0}
 
 
 \count0=\delcode`(
-\showthe\count0
+\TEST{delcode as number}
+{\showthe\count0}
 
 
 \Udelcode`a=0 "28
 
 \setbox0\hbox{$\left a x\right)$}
-\showbox0
+\TEST{Udelcode setting}
+{\showbox0}
 
 
 
 \count0=\Udelcodenum`a
-\showthe\count0
+\TEST{Udelcode as number}
+{\showthe\count0}
 
 
 \Udelcodenum`a= "000028
 
 \setbox0\hbox{$\left a x\right)$}
-\showbox0
+\TEST{Udelcodenum setting}
+{\showbox0}
+
 
 \count0=\Udelcodenum`a
-\showthe\count0
+\TEST{Udelcodenum as number}
+{\showthe\count0}
+
 
 
 
