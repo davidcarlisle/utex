@@ -8,13 +8,20 @@
 \def\newhat#1#{\Umathaccent#1 0 1 94 }
 
 \setbox0\hbox{$\newhat{x}$}
-\showbox0
+\TEST{Umathaccent}{\showbox0}
+
 \setbox0\hbox{$\newhat bottom{x}$}
-\showbox0
+\TEST{Umathaccent bottom}{\showbox0}
+
 \setbox0\hbox{$\newhat fixed{x}$}
-\showbox0
+\TEST{Umathaccent fixed}{\showbox0}
+
+\setbox0\hbox{$\newhat bottom fixed{x}$}
+\TEST{Umathaccent bottom fixed}{\showbox0}
+
 \setbox0\hbox{$\newhat rubbish{x}$}
-\showbox0
+\TEST{Umathaccent rubbish}{\showbox0}
+
 
 
 
