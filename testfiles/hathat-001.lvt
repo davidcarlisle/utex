@@ -3,15 +3,17 @@
 
 
 \START
-\wlog{zero [^^00]}
-\wlog{A [^^41]}
-\wlog{A [^^^^0041]}
-\wlog{A [^^^^^00041]}
-\wlog{A [^^^^^^000041]}
-\wlog{`A [^^c0]}
-\wlog{`A [^^^^00c0]}
-\wlog{`A [^^^^^000c0]}
-\wlog{`A [^^^^^^0000c0]}
-\wlog{bfA [^^^^^1d400]}
-\wlog{bfA [^^^^^^01d400]}
+\TESTEXP{Ignored null}{zero [^^00]}
+\catcode0=12
+\TESTEXP{Non-ignored null}{zero [\number`^^00]}
+\TESTEXP{A 2}{A [^^41]}
+\TESTEXP{A 4}{A [^^^^0041]}
+\TESTEXP{A 5}{A [^^^^^00041]}
+\TESTEXP{A 6}{A [^^^^^^000041]}
+\TESTEXP{`A 2}{`A [^^c0]}
+\TESTEXP{`A 4}{`A [^^^^00c0]}
+\TESTEXP{`A 5}{`A [^^^^^000c0]}
+\TESTEXP{`A 6}{`A [^^^^^^0000c0]}
+\TESTEXP{bfA 5}{bfA [^^^^^1d400]}
+\TESTEXP{bfA 6}{bfA [^^^^^^01d400]}
 \END
