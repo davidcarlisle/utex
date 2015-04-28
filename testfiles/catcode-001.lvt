@@ -1,0 +1,25 @@
+
+
+\input regression-test.tex
+
+\def\z#1#2#3{\TESTEXP{U+#1, Unicode #2, #3}{U+#1: \the\catcode"#1}}
+
+\START
+
+\z{1D400}{3.1}{Lu}
+
+\z{1F622}{6.0}{So}
+
+\z{2F808}{3.1}{Lo}
+
+\z{0037F}{7.0}{Lu}
+
+\z{0528}{7.0}{Lu}
+
+\z{0DE7}{7.0}{Nd}
+
+\z{1F000}{5.1}{So}
+
+
+
+\END
