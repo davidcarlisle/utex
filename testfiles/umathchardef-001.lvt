@@ -5,33 +5,40 @@
 \START
 
 \Umathchardef\z"1"1"12
-\show\z
+\TESTEXP{Umathchardef meaning}{\meaning\z}
 
-\showthe\numexpr\z\relax
+\TESTEXP{Umathchardef num}{\the\numexpr\z\relax}
+
+\TEST{Umathchardef num = "1200012}{
 \ifnum\z="1200012
-\TYPE{\string\Umathcodenum\string\z="1200012}
+\TYPE{yes}
 \else
-\TYPE{\string\Umathcodenum\string\z!="1200012}
+\TYPE{no}
 \fi
+}
 
 \Umathcharnumdef\zz"1200012
+\TESTEXP{Umathcharnumdef meaning}{\meaning\zz}
 
-\show\zz
 
 \mathchardef\zzz"1112
-\show\zzz
+\TESTEXP{mathchardef meaning}{\meaning\zzz}
 
+\TEST{Umathchardef = Umathcharnumdef ?}{
 \ifx\z\zz
 \TYPE{\string\z=\string\zz}
 \else
 \TYPE{\string\z!=\string\zz}
 \fi
+}
 
+\TEST{Umathchardef = chardef ?}{
 \ifx\z\zzz
 \TYPE{\string\z=\string\zzz}
 \else
 \TYPE{\string\z!=\string\zzz}
 \fi
+}
 
 \END
 
