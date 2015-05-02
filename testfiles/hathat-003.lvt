@@ -1,0 +1,18 @@
+\input regression-test.tex
+
+
+
+\START
+
+\catcode"d835=12
+\catcode"dd62=12
+\catcode"1D562=12
+
+\TESTEXP{fake surrogate pair}{^^^^d835^^^^dd62}
+\TESTEXP{fake surrogate pair}{^^^^d835^^^^dd62}
+\TESTEXP{plane 1}{^^^^^1d562}
+\TESTEXP{character bb q}{𝕢}
+\def\zz#1#2#3#4\relax{[#3]}
+\TESTEXP{token count, #3=W}{\zz^^^^d835^^^^dd62WXYZ\relax}
+\TESTEXP{token count, #3=X}{\zz^^^^^1d562WXYZ\relax}
+\END
