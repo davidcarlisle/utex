@@ -25,18 +25,6 @@ TEST 5: 1D538 is one token
 ============================================================
 [𝔸][1]
 ============================================================
-! Extra \else.
-l. ...\else
-I'm ignoring this; it doesn't match any \if.
-##1 != ##2
-! Extra \fi.
-l. ...\fi
-}
-I'm ignoring this; it doesn't match any \if.
-! Too many }'s.
-l. ...\fi}
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
 ============================================================
 TEST 6: 65
 ============================================================

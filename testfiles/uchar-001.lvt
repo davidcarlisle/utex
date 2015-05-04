@@ -36,9 +36,6 @@
 \fi}%
 \egroup}
 
-\else
-\immediate\write20{#1 != #2}%
-\fi}
 
 \test{65}{A}
 \test{"41}{A}
