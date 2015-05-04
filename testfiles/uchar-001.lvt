@@ -1,0 +1,52 @@
+\input regression-test.tex
+
+
+
+\START
+
+
+\TESTEXP{meaning}{\meaning\Uchar}
+
+
+\TESTEXP{65=A}{\expandafter\meaning\Uchar65 }
+
+\TESTEXP{0=null}{\expandafter\meaning\Uchar0 }
+
+\TESTEXP{"1D538 = bbb A}{\expandafter\meaning\Uchar"1D538 }
+
+
+\edef\z{\Uchar"1D538}
+\def\zz#1#2#3\relax{[#1][#2]}
+\TESTEXP{1D538 is one token}{\expandafter\zz\z123\relax}
+
+
+\def\test#1{\bgroup\catcode#1=12\relax\xtest{#1}}
+
+\def\xtest#1#2{%
+\TESTEXP{#1}{%
+\if#2\Uchar\numexpr#1\relax
+[#1 character code OK]
+\else
+[#1 character code bad]
+\fi
+\expandafter\ifx\Uchar\numexpr#1\relax#2%
+[#1 catcode OK]
+\else
+[#1 catcode bad]
+\fi}%
+\egroup}
+
+\else
+\immediate\write20{#1 != #2}%
+\fi}
+
+\test{65}{A}
+\test{"41}{A}
+\test{`A}{A}
+\test{0}{^^@}
+\test{"E9}{^^e9}
+\test{"1D538}{^^^^^^01d538}
+\test{"10FFFF}{^^^^^^10ffff}
+
+
+\END
