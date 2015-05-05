@@ -5,21 +5,8 @@
 
 \START
 
-\setbox0\hbox{^^^065}
-\TEST{three hat}{\showbox0}
 
-\begingroup
-\catcode`4=7
+\TESTEXP{three hat}{[^^^065]}
 
-\setbox0\hbox{$ 4444{a} $}
-\TEST{four fours, no hex}{\showbox0}
-
-\setbox0\hbox{44440065}
-\TEST{four fours, hex}{\showbox0}
-
-\setbox0\hbox{444444000065}
-\TEST{six fours, hex}{\showbox0}
-
-\endgroup
 
 \END

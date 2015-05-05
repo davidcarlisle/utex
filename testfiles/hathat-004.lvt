@@ -1,0 +1,22 @@
+\input regression-test.tex
+
+% Tests derived from some of Heiko and Bruno's cases from
+% http://tex.stackexchange.com/questions/62725/the-notation-in-various-engines
+
+\START
+
+\begingroup
+\catcode`4=7
+
+\setbox0\hbox{$ 4444{a} $}
+\TEST{four fours, no hex}{\showbox0}
+
+\setbox0\hbox{44440065}
+\TEST{four fours, hex}{\showbox0}
+
+\setbox0\hbox{444444000065}
+\TEST{six fours, hex}{\showbox0}
+
+\endgroup
+
+\END
