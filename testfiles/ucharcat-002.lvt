@@ -1,0 +1,58 @@
+\input regression-test.tex
+
+
+
+\START
+
+
+\TESTEXP{65=A/04}{\expandafter\expandafter\expandafter\meaning\Ucharcat65 04}
+\TESTEXP{65=A/11}{\expandafter\expandafter\expandafter\meaning\Ucharcat65 11}
+\TESTEXP{65=A/12}{\expandafter\expandafter\expandafter\meaning\Ucharcat65 12}
+
+% avoid diferences in loging control characters
+{\catcode0=12 
+\TESTEXP{0=null/12}{\if^^@\Ucharcat0 12 null\else?\fi}
+}
+
+\TESTEXP{"1D538 = bbb A/11}{\expandafter\expandafter\expandafter\meaning\Ucharcat"1D538 11}
+\TESTEXP{"1D538 = bbb A/12}{\expandafter\expandafter\expandafter\meaning\Ucharcat"1D538 12}
+
+
+\edef\z{\Ucharcat"1D538 12}
+\def\zz#1#2#3\relax{[#1][#2]}
+\TESTEXP{1D538 is one token}{\expandafter\zz\z123\relax}
+
+
+\def\test#1#2{\bgroup\catcode#2=#1\relax\xtest{#1}{#2}}
+
+\def\xtest#1#2#3{%
+\TESTEXP{#2/#1}{%
+\if#3\Ucharcat\numexpr#2\relax\numexpr#1\relax
+[#1 character code OK]
+\else
+[#1 character code bad]
+\fi
+\expandafter\expandafter\expandafter\ifx\Ucharcat\numexpr#2\relax\numexpr#1\relax#3%
+[#1 catcode OK]
+\else
+[#1 catcode bad]
+\fi}%
+\egroup}
+
+
+%\test{01}{65}{A}
+%\test{02}{65}{A}
+\test{03}{65}{A}
+\test{04}{65}{A}
+\test{11}{65}{A}
+\test{11}{65}{A}
+\test{12}{65}{A}
+\test{11}{"41}{A}
+\test{11}{`A}{A}
+\test{12}{0}{^^@}
+\test{11}{"E9}{^^e9}
+\test{11}{"1D538}{^^^^^^01d538}
+\test{11}{"10FFFF}{^^^^^^10ffff}
+
+
+\END
