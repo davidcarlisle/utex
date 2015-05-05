@@ -24,23 +24,11 @@
 {\showbox0}
 
 
-
-\count0=\Udelcodenum`a
-\TEST{Udelcode as number}
-{\showthe\count0}
-
-
 \Udelcodenum`a= "000028
 
 \setbox0\hbox{$\left a x\right)$}
 \TEST{Udelcodenum setting}
 {\showbox0}
-
-
-\count0=\Udelcodenum`a
-\TEST{Udelcodenum as number}
-{\showthe\count0}
-
 
 
 
