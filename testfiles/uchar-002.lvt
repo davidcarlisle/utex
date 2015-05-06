@@ -1,0 +1,11 @@
+\input regression-test.tex
+
+
+
+\START
+
+\edef\tmp{\Uchar32}
+\TESTEXP{Uchar32 is normal space}{\ifx\tmp\space yes\else no\fi}
+
+
+\END
