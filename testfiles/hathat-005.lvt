@@ -1,0 +1,15 @@
+\input regression-test.tex
+
+% luatex convention for writing raw bytes using the codes 1100000-1100FF
+
+\START
+
+
+\TESTEXP{ASCII: abc}{[^^^^^^110061^^^^^^110062^^^^^^110063]}
+
+\TESTEXP{Characters}{[^^^^00e0^^^^0180^^^^00e7]}
+
+\TESTEXP{UTF8 bytes: abc}{[^^^^^^1100c3^^^^^^1100a0^^^^^^1100c6^^^^^^110080^^^^^^1100c3^^^^^^1100a7]}
+
+
+\END
