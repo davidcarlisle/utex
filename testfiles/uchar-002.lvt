@@ -1,5 +1,6 @@
-\input regression-test.tex
+% Testing that \Uchar returns a catcode 10 space (like \string).
 
+\input regression-test.tex
 
 
 \START

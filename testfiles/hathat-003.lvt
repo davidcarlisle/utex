@@ -1,3 +1,6 @@
+% Testing the behaviour of character reference to characters
+% in the UTF-16 surrogate pair ranges.
+
 \input regression-test.tex
 
 

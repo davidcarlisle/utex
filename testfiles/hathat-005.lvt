@@ -1,6 +1,8 @@
+% Testing luatex convention for writing raw bytes using the codes
+% 1100000-11000FF
+
 \input regression-test.tex
 
-% luatex convention for writing raw bytes using the codes 1100000-1100FF
 
 \START
 

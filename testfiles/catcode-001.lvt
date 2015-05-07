@@ -1,4 +1,6 @@
-
+% Testing the default (plain format) catcodes of a range of characters
+% mainly concentrating on newish versions of Unicode and different
+% Unicode character classes. (As shown in #2 amd #3 respectively).
 
 \input regression-test.tex
 

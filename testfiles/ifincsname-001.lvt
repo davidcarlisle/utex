@@ -1,6 +1,6 @@
+% Testing \ifincsname (a pdftex derived primitive).
 
 \input regression-test.tex
-
 
 
 \START

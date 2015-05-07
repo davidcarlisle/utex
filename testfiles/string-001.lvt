@@ -1,3 +1,7 @@
+% Testing the behaviour of \string on character tokens
+% specified directly or via hex reference
+% including characters above "FFFF.
+
 \input regression-test.tex
 
 \def\s#1{\immediate\write20{#1}}

@@ -1,4 +1,5 @@
-
+% Testing the behaviour of \show with csnames including #
+% See:
 % http://tracker.luatex.org/view.php?id=902
 
 \input regression-test.tex

@@ -1,5 +1,9 @@
-\input regression-test.tex
+% Testing the \Ucharcat primitive introduced by xetex
+% provided in lua if not already defined by the
+% configuration file for this test suite.
+% \meaning detects non primitive use.
 
+\input regression-test.tex
 
 
 \START

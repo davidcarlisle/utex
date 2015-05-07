@@ -1,5 +1,10 @@
-\input regression-test.tex
+% Testing the \Ucharcat primitive introduced by xetex
+% provided in lua if not already defined by the
+% configuration file for this test suite.
+% Three \expandafter eliminates the extra expansion step
+% required for non-primitive \Ucharcat (which is detected by charcat-001).
 
+\input regression-test.tex
 
 
 \START

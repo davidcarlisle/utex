@@ -1,4 +1,5 @@
-
+% Testing the output of error messages involving long strings.
+% See:
 % http://tracker.luatex.org/view.php?id=903
 
 \input regression-test.tex

@@ -1,5 +1,6 @@
-\input regression-test.tex
+% Testing \Umathchardef.
 
+\input regression-test.tex
 
 
 \START

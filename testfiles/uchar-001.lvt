@@ -1,5 +1,6 @@
-\input regression-test.tex
+% Testing the \Uchar primitive introduced by luatex.
 
+\input regression-test.tex
 
 
 \START

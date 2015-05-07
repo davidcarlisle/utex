@@ -1,3 +1,5 @@
+% Testing \Udelcode and \Udelcodenum.
+% In particular accessing the code as a number.
 
 \input regression-test.tex
 
