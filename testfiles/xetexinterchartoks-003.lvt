@@ -1,0 +1,45 @@
+% Testing the \XeTeXinterchartoks primitive introduced by xetex.
+% See http://tug.org/pipermail/xetex/2015-May/025984.html
+% See http://tex.stackexchange.com/a/138715
+
+\input regression-test.tex
+
+
+\START
+
+\ifx\XeTeXinterchartokenstate\undefined\expandafter\END\fi
+
+\XeTeXinterchartokenstate = 1
+
+\newXeTeXintercharclass \vowelsclass
+
+\showboxbreadth\maxdimen
+\tracingonline2
+
+\XeTeXcharclass `\a \vowelsclass
+\XeTeXcharclass `\e \vowelsclass
+\XeTeXcharclass `\i \vowelsclass
+\XeTeXcharclass `\o \vowelsclass
+\XeTeXcharclass `\u \vowelsclass
+
+\XeTeXcharclass `\A \vowelsclass
+\XeTeXcharclass `\E \vowelsclass
+\XeTeXcharclass `\I \vowelsclass
+\XeTeXcharclass `\O \vowelsclass
+\XeTeXcharclass `\U \vowelsclass
+
+\XeTeXinterchartoks \vowelsclass 0 = {]}
+\XeTeXinterchartoks \vowelsclass 255 = {]}
+
+
+\XeTeXinterchartoks 0 \vowelsclass = {[\relax}
+\XeTeXinterchartoks 255 \vowelsclass = {[\relax}
+\TEST{Bracket consectutive vowels with \relax}{
+\setbox0\hbox{One two three four}\showbox0}
+
+
+\XeTeXinterchartoks 255 \vowelsclass = {[}
+\TEST{Bracket consectutive vowels without \relax}{
+\setbox0\hbox{One two three four}\showbox0}
+
+\END

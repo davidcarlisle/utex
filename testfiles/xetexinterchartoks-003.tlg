@@ -1,0 +1,82 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+\vowelsclass=\XeTeXintercharclass4
+============================================================
+TEST 1: Bracket consectutive vowels with \relax 
+============================================================
+> \box0=
+\hbox(7.5+2.5)x111.16689
+.\tenrm [
+.\tenrm O
+.\tenrm ]
+.\tenrm n
+.\tenrm [
+.\tenrm e
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm t
+.\kern-0.27779
+.\tenrm w
+.\tenrm [
+.\tenrm o
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm t
+.\tenrm h
+.\tenrm r
+.\tenrm [
+.\tenrm e
+.\tenrm e
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm f
+.\tenrm [
+.\tenrm o
+.\tenrm u
+.\tenrm ]
+.\tenrm r
+! OK.
+<to be read again> 
+\endgroup 
+l. ...\setbox0\hbox{One two three four}\showbox0}
+============================================================
+============================================================
+TEST 2: Bracket consectutive vowels without \relax 
+============================================================
+> \box0=
+\hbox(7.5+2.5)x113.94467
+.\tenrm [
+.\tenrm [
+.\tenrm O
+.\tenrm ]
+.\tenrm n
+.\tenrm [
+.\tenrm e
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm t
+.\kern-0.27779
+.\tenrm w
+.\tenrm [
+.\tenrm o
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm t
+.\tenrm h
+.\tenrm r
+.\tenrm [
+.\tenrm e
+.\tenrm e
+.\tenrm ]
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm f
+.\tenrm [
+.\tenrm o
+.\tenrm u
+.\tenrm ]
+.\tenrm r
+! OK.
+<to be read again> 
+\endgroup 
+l. ...\setbox0\hbox{One two three four}\showbox0}
+============================================================

@@ -1,0 +1,30 @@
+% Testing the \XeTeXinterchartoks primitive introduced by xetex.
+% See http://tug.org/pipermail/xetex/2015-May/025984.html
+
+\input regression-test.tex
+
+
+\START
+
+\ifx\XeTeXinterchartokenstate\undefined\expandafter\END\fi
+
+\XeTeXinterchartokenstate = 1
+
+\newXeTeXintercharclass \Xclass
+\XeTeXcharclass `\X \Xclass
+
+\XeTeXinterchartoks 0 \Xclass = {\zza}
+\XeTeXinterchartoks 255 \Xclass = {\zzb}
+
+
+\def\zza{\futurelet\tmpa\relax}
+
+\def\zzb{\advance\count0 1 \the\count0\ifnum\count0>4\relax\fi}
+
+\TEST{Testing boundary condition with \futurelet lookahead}{%
+\setbox0\hbox{xxxxXxxx}\showbox0
+}
+
+
+
+\END

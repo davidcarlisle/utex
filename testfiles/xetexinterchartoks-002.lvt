@@ -1,0 +1,38 @@
+% Testing the \XeTeXinterchartoks primitive introduced by xetex.
+% See http://tug.org/pipermail/xetex/2015-May/025984.html
+
+\input regression-test.tex
+
+
+\START
+
+\ifx\XeTeXinterchartokenstate\undefined\expandafter\END\fi
+
+\XeTeXinterchartokenstate = 1
+
+\newXeTeXintercharclass \Xclass
+\XeTeXcharclass `\X \Xclass
+
+\XeTeXinterchartoks 0 \Xclass = {\futurelet\tmp\zz}
+
+\def\zz{\show\tmp}
+
+\TEST{Testing X with \futurelet lookahead}{%
+\setbox0\hbox{xxxxXxxx}
+}
+
+\TEST{Testing \relax with \futurelet lookahead}{%
+\setbox0\hbox{xxxx\relax Xxxx}
+}
+
+\TEST{Testing \empty with \futurelet lookahead}{%
+\setbox0\hbox{xxxx\empty Xxxx}
+}
+
+\TEST{Testing \def\a{X} with \futurelet lookahead}{%
+\def\a{X}\setbox0\hbox{xxxx\a xxx}
+}
+
+
+
+\END

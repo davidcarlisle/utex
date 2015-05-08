@@ -1,0 +1,24 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+\Xclass=\XeTeXintercharclass4
+============================================================
+TEST 1: Testing boundary condition with \futurelet lookahead
+============================================================
+> \box0=
+\hbox(6.83331+0.0)x64.44469
+.\tenrm x
+.\tenrm x
+.\tenrm x
+.\tenrm x
+.\tenrm 2
+.\tenrm 3
+.\tenrm 4
+.\tenrm 5
+.\tenrm X
+.\tenrm x
+.\tenrm x
+.\tenrm x
+! OK.
+<argument> \setbox 0\hbox {xxxxXxxx}\showbox 0 
+l. ...}
+============================================================
