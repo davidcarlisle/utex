@@ -1,0 +1,18 @@
+% Testing the behaviour of \(pdf)strcmp primitive from pdftex
+% treatment of #
+
+\input regression-test.tex
+
+
+\START
+
+
+\TESTEXP{{#}{#}}
+        {\strcmp{#}{#}}
+\TESTEXP{{\string#}{#}}
+        {\strcmp{\string#}{#}}
+\TESTEXP{{\string#}{\string#}}
+        {\strcmp{\string#}{\string#}}
+
+
+\END

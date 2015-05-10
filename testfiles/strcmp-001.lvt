@@ -1,0 +1,11 @@
+% Testing the behaviour of \(pdf)strcmp primitive from pdftex
+
+
+\input regression-test.tex
+
+
+\START
+
+\TESTEXP{primitive name}{\meaning\strcmp}
+
+\END

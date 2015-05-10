@@ -1,0 +1,43 @@
+% Testing the behaviour of \(pdf)strcmp primitive from pdftex
+
+
+\input regression-test.tex
+
+
+\START
+
+\TESTEXP{{a}{a}}{\strcmp{a}{a}}
+\TESTEXP{{a}{b}}{\strcmp{a}{b}}
+\TESTEXP{{b}{a}}{\strcmp{b}{a}}
+
+\edef\a{\string a}
+
+\TESTEXP{{a_11}{a_12}}{\strcmp{a}{\a}}
+
+\def\tmp{a}
+
+\TESTEXP{{\tmp}{a}}
+        {\strcmp{\tmp}{a}}
+\TESTEXP{{\noexpand\tmp}{a}}
+        {\strcmp{\noexpand\tmp}{a}}
+\TESTEXP{{\noexpand\tmp}{\noexpand\tmp}}
+        {\strcmp{\noexpand\tmp}{\noexpand\tmp}}
+\TESTEXP{{\noexpand\tmp}{\string\tmp}}
+        {\strcmp{\noexpand\tmp}{\string\tmp}}
+\TESTEXP{{\noexpand\tmp}{\string\tmp\space}}
+        {\strcmp{\noexpand\tmp}{\string\tmp\space}}
+
+
+\TESTEXP{{\relax}{\string\relax\space}}
+        {\strcmp{\relax}{\string\relax\space}}
+
+\TESTEXP{{\%&^\^{1}}{\%&^{\accent 94 1}}}
+        {\strcmp{\%&^\^{1}}{\%&^{\accent 94 1}}}
+
+{\escapechar-1
+\TESTEXP{{\%&^\^{1}}{\%&^{\accent 94 1}}}
+        {\strcmp{\%&^\^{1}}{\%&^{accent 94 1}}}
+
+}
+
+\END
