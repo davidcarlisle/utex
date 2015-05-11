@@ -1,0 +1,27 @@
+% Testing the \pdfsavepos primitive introduced by pdftex
+
+\input regression-test.tex
+\let\immediate\relax% need non immediate test headings here
+
+\START
+
+\pdfpageheight=297mm
+\pdfpagewidth=210mm
+
+a\pdfsavepos
+
+\TEST{position 1: }{\write20{(%
+\the\numexpr\pdflastxpos-6374687,%
+\the\numexpr\the\pdflastypos-49989344)}}
+
+
+\noindent\quad a\pdfsavepos
+
+\TEST{position 2: }{\write20{(%
+\the\numexpr\pdflastxpos-5719328,%
+\the\numexpr\the\pdflastypos-49202912)}}
+
+
+
+\END
+
