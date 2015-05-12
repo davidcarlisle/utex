@@ -1,0 +1,20 @@
+% Testing the \Ucharcat primitive introduced by xetex
+% provided in lua if not already defined by the
+% configuration file for this test suite.
+% Testing t helua implementation, mostly
+
+\input regression-test.tex
+
+
+\START
+
+
+\def\LowerCase#1{%
+  \Ucharcat\numexpr\lccode`#1\relax\numexpr\catcode`#1\relax
+}
+\catcode`\A=12 %
+\edef\test{\LowerCase{A}}\relax
+
+\TESTEXP{lower A: }{\test}
+
+\END
