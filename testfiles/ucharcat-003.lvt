@@ -1,7 +1,7 @@
 % Testing the \Ucharcat primitive introduced by xetex
 % provided in lua if not already defined by the
 % configuration file for this test suite.
-% Testing t helua implementation, mostly
+% Testing the lua implementation, mostly
 
 \input regression-test.tex
 
